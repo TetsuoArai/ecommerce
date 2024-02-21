@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql" // change this to whatever database you have in your PC
+  url      = env("DATABASE_URL")
+}
+
+model Brand {
+  id        Int       @id @default(autoincrement())
+  name      String
+  createdAt DateTime  @default(now())
+  logoURL   String?
+  Product   Product[]
+}
+
+model ProductType {
+  id        Int       @id @default(autoincrement())
+  name      String
+  createdAt DateTime  @default(now())
+  Product   Product[]
+  Size      Size[]
+}
+
+model Product {
+  id            Int            @id @default(autoincrement())
+  name          String
+  brand         Brand          @relation(fields: [brandId], references: [id])
+  brandId       Int
+  price         Float
+  imageURL      String?
+  productTypeId Int
+  productType   ProductType    @relation(fields: [productTypeId], references: [id])
+  createdAt     DateTime       @default(now())
+  WishList      WishList[]
+  ShoppingCart  ShoppingCart[]
+  Inventory     Inventory[]
+}
+
+model Size {
+  id            Int         @id @default(autoincrement())
+  size          String
+  productTypeId Int
+  productType   ProductType @relation(fields: [productTypeId], references: [id])
+  Inventory     Inventory[]
+}
+
+model Inventory {
+  id        Int     @id @default(autoincrement())
+  productId Int
+  product   Product @relation(fields: [productId], references: [id])
+  sizeId    Int
+  size      Size    @relation(fields: [sizeId], references: [id])
+  quantity  Int
+}
+
+model WishList {
+  id        Int     @id @default(autoincrement())
+  userId    String
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+}
+
+model ShoppingCart {
+  id        Int     @id @default(autoincrement())
+  userId    String
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+}

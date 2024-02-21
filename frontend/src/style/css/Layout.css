@@ -1,0 +1,39 @@
+.btn-layout{
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;  
+}
+.btn-layout:hover{
+    color: #7289da;
+}
+
+.btn-layout::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #7289da;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.btn-layout:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.shopping-cart-button {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+  
+.shopping-cart-button:hover {
+    color: #7289da;
+}
+  
+.shopping-cart-button > svg {
+    margin-right: 5px; 
+}
