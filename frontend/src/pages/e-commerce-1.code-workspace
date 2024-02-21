@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../../../../e-commerce-1"
+		},
+		{
+			"path": "../../../node_modules"
+		},
+		{
+			"path": "../../../src"
+		},
+		{
+			"path": "../../../backend"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../json-backend"
+		}
+	],
+	"settings": {}
+}
