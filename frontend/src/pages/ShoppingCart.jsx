@@ -49,12 +49,14 @@ function ShoppingCart() {
                     />
 
                 <div className="card-body max-w-[200vh] ml-5">
-                    <h2 className="card-title text-[45px] mb-[20px] font-bold tracking-wide h-[200px] ">
+                    <h2 className="card-title text-[45px] mb-[20px] font-bold tracking-wide h-[200px] ">  
     <span className="block leading-[0.8]">{product[0].model}</span>
 </h2>
                     <p className="text-[22px]"><span className="font-bold text-[25px] ">Price:</span> ${product[0].price}<br/>{product[0].publishedAt}</p>
                     <h1 className="font-bold">Size:</h1>
                     <div className="grid grid-cols-5">
+
+                        
                     {size.map((size, index) => (
                         <ul className="grid gap-6 grid-cols-3" key={index}>
                             <li className="flex flex-col justify-center items-center mb-4 ml-4">
