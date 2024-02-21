@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 function Filter() {
   const [brands, setBrands] = useState([]);
   const [selectedPrice, setSelectedPrice] = useState(null);
-  const [SneakersBrands, setSneakersBrands] = useState({id: 0, name: ""})
 
   const price = ["$200 - $250", "$150 - $200", "$100 - $150", "$50 - $100"];
 
@@ -52,7 +51,8 @@ function Filter() {
               {price}
             </Checkbox>
           ))}
-        <Button colorScheme="teal" variant="solid" className="w-[250px] mt-10">Filtrar</Button>
+        <Button colorScheme="teal" variant="solid" className="w-[250px] mt-10" 
+        >Filtrar</Button>
         </div>
       </form>
     </div>
