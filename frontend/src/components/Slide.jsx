@@ -12,6 +12,7 @@ function Slide() {
     "https://media.gq.com.mx/photos/6318d280c6577c3791606b51/16:9/w_2560%2Cc_limit/ADIDAS-NMDV3.jpg",
     "https://img.buzzfeed.com/buzzfeed-static/static/2023-06/6/2/tmp/3a8b1436d7a6/tmp-name-3-469-1686019372-20_16x9.jpg",
   ];
+  
 
   return (
     <div className="bg-fixed">

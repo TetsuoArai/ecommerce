@@ -34,6 +34,7 @@ function ShoppingCart() {
 
     const ch = (siz) => {
         setCheck(siz)
+        
     }   
 
 
@@ -48,7 +49,7 @@ function ShoppingCart() {
                     alt="Album" className="bg-cover h-full drop-shadow-[10px_13px_7px_rgba(100,100,100,10)] hover:-translate-y-2 hover:ease-in duration-300 max-h-auto w-auto "
                     />
 
-                <div className="card-body max-w-[200vh] ml-5">
+                <div className="card-body max-w-[300vh] ml-5">
                     <h2 className="card-title text-[45px] mb-[20px] font-bold tracking-wide h-[200px] ">  
     <span className="block leading-[0.8]">{product[0].model}</span>
 </h2>
@@ -60,8 +61,8 @@ function ShoppingCart() {
                     {size.map((size, index) => (
                         <ul className="grid gap-6 grid-cols-3" key={index}>
                             <li className="flex flex-col justify-center items-center mb-4 ml-4">
-                                <input type="checkbox" id={index}  className="hidden peer" checked={size.size === Check} onChange={() =>ch(size.size)}/>
-                                <label htmlFor={index} className="inline-flex items-center justify-center max-w-[30px] max-h-[30px] p-5 text-white  border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-900 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-900 dark:peer-checked:text-gray-900 peer-checked:text-gray-900 hover:bg-gray-50 dark:text-gray-900 dark:bg-white ">
+                                <input type="checkbox" id={index}  className="hidden peer" checked={size.size === Check} onChange={() =>ch(size.size)} />
+                                <label htmlFor={index} className="inline-flex items-center justify-center max-w-[30px] max-h-[30px] p-5 text-black  border-2 border-gray-800 rounded-lg cursor-pointer dark:hover:text-gray-900 dark:border-gray-100 peer-checked:border-teal-600 hover:text-gray-900 dark:peer-checked:text-gray-900 peer-checked:text-gray-900 hover:bg-teal-50 dark:text-gray-900 dark:bg-white ">
                                     <div className="block">
                                         <div className="w-full text-lg font-semibold">{size.size}</div>
                                     </div>

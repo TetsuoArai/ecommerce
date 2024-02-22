@@ -11,6 +11,7 @@ function Pagination({datos, postPerPage, setCurrentPosition, currentPosition}) {
     isGoingBack ? setCurrentPosition(currentPosition - 1) : setCurrentPosition(currentPosition + 1);
   }
 
+  
   return (
     <div className="flex justify-center items-center">
       <button onClick={() => NextAndBack(true)} className={currentPosition !== 1 ? "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 mt-[30px] rounded-s-lg": "hidden"}>back</button>
