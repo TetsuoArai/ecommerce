@@ -54,7 +54,7 @@ function Product() {
               <Stack
                 direction="row"
                 spacing={4}
-                className="flex items-center justify-center mt-2 mb-2 mr-10 ml-10"
+                className="flex items-center justify-center mt-2 mb-2 mr-4 ml-4"
               >
                 <Button colorScheme="teal" variant="solid" className="w-full">
                   Buy now

@@ -46,6 +46,7 @@ function Home() {
               direction="row"
               spacing={4}
               className="flex items-center justify-center mt-2 mb-2">
+                
               <Button colorScheme="teal" variant="solid" className="w-[180px]">
                 Buy now
               </Button>
@@ -60,7 +61,7 @@ function Home() {
               </svg>
               </Button>
               </Link>
-
+            
             </Stack>
           </div>
         ))}
