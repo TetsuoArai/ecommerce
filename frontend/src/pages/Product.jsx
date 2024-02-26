@@ -38,7 +38,7 @@ function Product() {
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3">
           {currentPosts.map((product) => (
             <div
-              className="rounded-lg m-1 xl:max-h-[470px] xl:max-w-[500px] mr-9 shadow-xl shadow-black-500/50 border-none flex flex-col mt-7 ml-2 mb-10"
+            className="rounded-lg m-1 w-auto shadow-xl shadow-black-500/50 border-none flex flex-col mt-7 xl:ml-7 mb-10 sm:mr-10"
               key={product.id}
             >
               <div className="bg-[#f3f4f6]">

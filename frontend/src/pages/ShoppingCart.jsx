@@ -91,6 +91,7 @@ function ShoppingCart() {
               <div className="card-actions w-auto pb-2 ">
                 <AddCart
                   idUser={user.id}
+                  idProduct={product[0].model+selectedSize}
                   image={product[0].image}
                   model={product[0].model}
                   size={selectedSize}

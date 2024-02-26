@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Swal from 'sweetalert2'
 
-function AddCart({idUser,image, model, size, price,qty}){
+function AddCart({idUser,idProduct,image, model, size, price,qty}){
     const [cart , setCart] = useState([])
     console.log(cart)
 
@@ -14,7 +14,7 @@ function AddCart({idUser,image, model, size, price,qty}){
 
     function Add(){
         if(size != null){
-            const product = {'image':image, 'model':model, 'size':size, 'price':price, 'qty':qty};
+            const product = {'id':idProduct,'image':image, 'model':model, 'size':size, 'price':price, 'qty':qty};
             setCart(prevCart => {
                 const newCart = [...prevCart, product];
                 localStorage.setItem(idUser, JSON.stringify(newCart));
