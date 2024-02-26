@@ -38,7 +38,7 @@ function Product() {
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3">
           {currentPosts.map((product) => (
             <div
-              className="rounded-lg m-1 w-auto mr-9 shadow-xl shadow-black-500/50 border-none flex flex-col mt-7 ml-7 mb-10"
+              className="rounded-lg m-1 xl:max-h-[470px] xl:max-w-[500px] mr-9 shadow-xl shadow-black-500/50 border-none flex flex-col mt-7 ml-2 mb-10"
               key={product.id}
             >
               <div className="bg-[#f3f4f6]">
@@ -54,7 +54,7 @@ function Product() {
               <Stack
                 direction="row"
                 spacing={4}
-                className="flex items-center justify-center mt-2 mb-2 mr-4 ml-4"
+                className="flex items-center justify-center mt-2 mr-4 ml-4 mb-5"
               >
                 <Button colorScheme="teal" variant="solid" className="w-full">
                   Buy now
@@ -80,7 +80,7 @@ function Product() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center items-center mb-11">
+      <div className="flex xl:justify-center items-center mb-11 sm:justify-end mr-10">
         <Pagination
           datos={products.length}
           postPerPage={postPerPage}

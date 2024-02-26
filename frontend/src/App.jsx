@@ -7,6 +7,8 @@ import Slide from "./components/Slide";
 import { useAuth } from "@clerk/clerk-react";
 import NotLogger from "./pages/NotLogger";
 
+import Cart from "./pages/Cart";
+
 function App(){
     const {isSignedIn} = useAuth();
     
@@ -20,6 +22,7 @@ function App(){
             {isSignedIn && (
                 <>
             <Route path='/ShoppingCart/:id' element={<ShoppingCart/>}/>
+            <Route path="/cart" element={<Cart/>}/>
             </>
             )}
             <Route path="*" element={<NotLogger/>}/>
